@@ -1,0 +1,8 @@
+.evenClass { background-color: green; color: white; font-weight: bolder;}
+.oddClass { background-color: gray; color: black; font-weight: bolder;}
+
+.menuItem {
+    display: inline-block;
+     margin:5px;
+     cursor: pointer;
+}

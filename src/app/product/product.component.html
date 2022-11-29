@@ -1,0 +1,13 @@
+<div style="border: 2px solid green; margin:1px; width: 48vw; display: inline-block">
+
+    <p>product works!</p>
+
+    {{param}}
+    <br>
+    {{queryParams}}
+
+<button type="button" (click)="getData(param)">Get Latest Data</button>
+
+{{data |json}}
+
+</div>

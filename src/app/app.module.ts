@@ -18,6 +18,9 @@ import { HighlightDirective } from './highlight.directive';
 import { HttpClientModule } from '@angular/common/http';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { LoginComponent } from './login/login.component';
+import { Test1Component } from './test1/test1.component';
+import { Test2Component } from './test2/test2.component';
+import { Test3Component } from './test3/test3.component';
 
 
 
@@ -35,7 +38,10 @@ import { LoginComponent } from './login/login.component';
     Child2Component,
     HighlightDirective,
     NotFoundComponent,
-    LoginComponent  
+    LoginComponent,
+    Test1Component,
+    Test2Component,
+    Test3Component  
     
   ],
   imports: [

@@ -1,7 +1,15 @@
 
 <div>
     <h4>Hello from  Home </h4>
-    <br>
-<app-product></app-product>
+  <ul>
+    <li class="menuItem" [routerLink]="'/home'" >Test1</li>
+    
+    <li class="menuItem"  [routerLink]="'test2'" >Test2</li>
+    
+    <li class="menuItem"  [routerLink]="'test3'" >Test3</li>
+  </ul>
+    
 <br>
+
+<router-outlet></router-outlet>
 </div>

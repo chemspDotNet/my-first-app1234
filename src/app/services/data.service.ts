@@ -2,6 +2,7 @@ import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { delay, from, interval, map, of } from "rxjs";
 import { TestService } from "./test.service";
+import { environment} from '../../environments/environment.prod'
 
 @Injectable({
     providedIn:'root'
@@ -12,8 +13,9 @@ export class DataService{
    source= from([1,2,3,4,5]);
    mysrc = of([1,2,3,4,5,6])
    
+   url = environment.url;
 
- private customers=[
+ private customers= of([
     { 'id': 1, 'name': 'Customer1', 'age': 20},
     { 'id': 2, 'name': 'Customer1', 'age': 20},
     {  'id': 3,'name': 'Customer1', 'age': 20},
@@ -24,7 +26,7 @@ export class DataService{
     { 'id': 8,'name': 'Customer1', 'age': 20},
     
  
-   ]
+   ]);
 
   //
    constructor( private http: HttpClient ){
@@ -33,12 +35,18 @@ export class DataService{
 
   getData(id:number){
 
-    interval(4550)
     debugger;
-    let customer = this.customers.find(x=>x.id == id);
-  return customer;
+   // let customer = this.customers.find(x=>x.id == id);
+  return 1;
   }
 
+  
+  getData1(){
+
+    debugger;
+     return this.customers.pipe(delay(3000))
+  
+  }
 
   AddCustomer( ){
     let x = { 'name': 'New Data', 'age': 11}
@@ -51,7 +59,7 @@ export class DataService{
 
     let token = localStorage.getItem('token');
 
-  return this.http.get('https://localhost:44397/api/quotes',{headers: {'Authorization':'bearer ' + token}});
+  return this.http.get(this.url,{headers: {'Authorization':'bearer ' + token}});
 
    }
 

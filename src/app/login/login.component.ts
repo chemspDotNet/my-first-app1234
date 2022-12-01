@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
         debugger;
         console.log(data)
       localStorage.setItem('token', data['access_token']);
-        this.rtr.navigate(['home', 'Edison'], {queryParams:{'city':'sadadawd'}});
+        this.rtr.navigate(['home'], {queryParams:{'city':'sadadawd'}});
        // this.rtr.navigateByUrl('home/NYC');
         this.account.IsLogin= true;
 

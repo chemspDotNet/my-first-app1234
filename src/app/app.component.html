@@ -4,8 +4,8 @@
   <div>
     <button *ngIf="account.IsLogin" class="btn btn-danger" (click)="logOut()" style="float: right;"> Log Out</button>
     <ul>
-        <li class="menuItem" [routerLink]="['home', 'Austin']"  [queryParams]="{'route':'abc'}"> Home</li>
-        <li class="menuItem" [routerLink]="['product', 191]" [queryParams]="{
+        <li class="menuItem" [routerLink]="['home']"  [queryParams]="{'route':'abc'}"> Home</li>
+        <li class="menuItem" [routerLink]="['product']" [queryParams]="{
           'name':'Paul', 'age':21
         }">Product</li>
     </ul>

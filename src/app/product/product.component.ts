@@ -22,7 +22,8 @@ export class ProductComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    
+     this.data = this.activatedRoute.snapshot.data['customers'];
+    debugger;
     this.param = this.activatedRoute.snapshot.params['id1'];
     this.queryParams = this.activatedRoute.snapshot.queryParams['countr'];
 
@@ -40,10 +41,12 @@ export class ProductComponent implements OnInit {
         }
        })
      debugger
+
+     
   }
   getData(id){
 
-    this.data = this.mysvc.getData(id);
+    this.data = this.mysvc.getData1();
 
   }
 }
